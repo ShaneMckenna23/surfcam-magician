@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import SurfCamContainer from "./components/SurfCamContainer";
+import AllFavorites from "./components/AllFavorites";
 
 import useFavorites from "./hooks/useFavorites";
 
@@ -26,6 +27,16 @@ const App = () => {
     <Router>
       <Layout favorites={favorites}>
         <Routes>
+          <Route
+            path="/favorites"
+            element={
+              <AllFavorites
+                favorites={favorites}
+                addFavorite={addFavorite}
+                removeFavorite={removeFavorite}
+              />
+            }
+          />
           <Route
             path="/spot/:id"
             element={

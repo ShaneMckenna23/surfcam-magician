@@ -34,7 +34,7 @@ const Search = () => {
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "column",
-          height: "40vh",
+          height: "10vh",
           overflowX: "scroll",
           marginTop: "3vh"
         }}

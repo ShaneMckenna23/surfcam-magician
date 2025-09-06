@@ -14,6 +14,9 @@ const Favorites = ({favorites}) => {
           flexDirection: "column"
         }}
       >
+        <Link className="favorite" to="/favorites" style={{ marginBottom: "0.5rem", fontWeight: "bold" }}>
+          <i className="fa fa-th" /> View All Favorites
+        </Link>
         {Object.entries(favorites).map(([spotId, spotTitle]) => {
           return (
             <Link key={spotId} className="favorite" to={`/spot/${spotId}`}><i className="fa fa-star" /> {spotTitle}</Link>
